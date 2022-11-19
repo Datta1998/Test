@@ -3,7 +3,7 @@ from flask import request
 from joblib import load
 
 app = Flask(__name__)
-model_path = "svm_gamma=0.001_C=0.5.joblib"
+model_path = "svm_gamma=0.001_C=0.7.joblib"
 model = load(model_path)
 
 @app.route("/")
@@ -25,4 +25,4 @@ def predict_digit():
 
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0",port=5001)
+    app.run(host="0.0.0.0",port=5005)
